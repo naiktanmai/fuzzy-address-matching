@@ -1,0 +1,19 @@
+{
+  "mainAddress": "mongodb",
+  "batchSize": 10,
+  "verbosity": 3,
+  "continueOnError": true,
+  "fields": ["First_Name,Last_Name"],
+  "logging": {
+    "type": "file",
+    "filename": "mongo-connector.log"
+  },
+  "namespaces": {
+    "include": ["crmcustomer.crmcustomer"]
+  },
+  "docManagers": [{
+      "targetURL": "esdb",
+      "docManager": "elastic2_doc_manager",
+      "autoCommitInterval": 0
+    }]
+}

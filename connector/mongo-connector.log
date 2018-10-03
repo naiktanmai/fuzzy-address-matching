@@ -1,0 +1,42 @@
+2018-10-03 09:55:17,672 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2018-10-03 09:55:17,673 [ALWAYS] mongo_connector.connector:51 - Python version: 3.6.1 (default, Jun 28 2017, 21:57:03) 
+[GCC 5.3.0]
+2018-10-03 09:55:17,675 [ALWAYS] mongo_connector.connector:51 - Platform: Linux-4.15.0-36-generic-x86_64-with
+2018-10-03 09:55:17,676 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.7.1
+2018-10-03 09:55:17,676 [WARNING] mongo_connector.connector:1260 - pymongo version 3.7.1 was installed without the C extensions. "InvalidBSON: Date value out of range" errors may occur if there are documents with BSON Datetimes that represent times outside of Python's datetime limit.
+2018-10-03 09:55:17,676 [WARNING] mongo_connector.connector:167 - MongoConnector: Can't find /usr/src/app/oplogstatus.txt, attempting to create an empty progress log
+2018-10-03 09:55:17,682 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.6.5
+2018-10-03 09:55:17,682 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2018-10-03 09:55:17,684 [ERROR] mongo_connector.connector:373 - No replica set at "mongodb"! A replica set is required to run mongo-connector. Shutting down...
+2018-10-03 10:08:03,352 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2018-10-03 10:08:03,352 [ALWAYS] mongo_connector.connector:51 - Python version: 3.6.1 (default, Jun 28 2017, 21:57:03) 
+[GCC 5.3.0]
+2018-10-03 10:08:03,354 [ALWAYS] mongo_connector.connector:51 - Platform: Linux-4.15.0-36-generic-x86_64-with
+2018-10-03 10:08:03,354 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.7.1
+2018-10-03 10:08:03,354 [WARNING] mongo_connector.connector:1260 - pymongo version 3.7.1 was installed without the C extensions. "InvalidBSON: Date value out of range" errors may occur if there are documents with BSON Datetimes that represent times outside of Python's datetime limit.
+2018-10-03 10:08:03,361 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.6.5
+2018-10-03 10:08:03,361 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2018-10-03 10:08:03,363 [ERROR] mongo_connector.connector:373 - No replica set at "mongodb"! A replica set is required to run mongo-connector. Shutting down...
+2018-10-03 10:34:34,768 [WARNING] mongo_connector.connector:851 - Deprecation warning: the current namespaces configuration format is outdated and support may be removed in a future release. Please update your config file to use the new format.
+2018-10-03 10:34:34,789 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2018-10-03 10:34:34,790 [ALWAYS] mongo_connector.connector:51 - Python version: 3.6.1 (default, Jun 28 2017, 21:57:03) 
+[GCC 5.3.0]
+2018-10-03 10:34:34,792 [ALWAYS] mongo_connector.connector:51 - Platform: Linux-4.15.0-36-generic-x86_64-with
+2018-10-03 10:34:34,792 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.7.1
+2018-10-03 10:34:34,792 [WARNING] mongo_connector.connector:1260 - pymongo version 3.7.1 was installed without the C extensions. "InvalidBSON: Date value out of range" errors may occur if there are documents with BSON Datetimes that represent times outside of Python's datetime limit.
+2018-10-03 10:34:34,792 [WARNING] mongo_connector.connector:167 - MongoConnector: Can't find /usr/src/app/oplog.timestamp, attempting to create an empty progress log
+2018-10-03 10:34:34,797 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.6.5
+2018-10-03 10:34:34,797 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2018-10-03 10:34:34,797 [INFO] mongo_connector.connector:277 - MongoConnector: Empty oplog progress file.
+2018-10-03 10:34:34,799 [ERROR] mongo_connector.connector:373 - No replica set at "mongodb"! A replica set is required to run mongo-connector. Shutting down...
+2018-10-03 10:34:58,845 [WARNING] mongo_connector.connector:851 - Deprecation warning: the current namespaces configuration format is outdated and support may be removed in a future release. Please update your config file to use the new format.
+2018-10-03 10:34:58,866 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2018-10-03 10:34:58,866 [ALWAYS] mongo_connector.connector:51 - Python version: 3.6.1 (default, Jun 28 2017, 21:57:03) 
+[GCC 5.3.0]
+2018-10-03 10:34:58,868 [ALWAYS] mongo_connector.connector:51 - Platform: Linux-4.15.0-36-generic-x86_64-with
+2018-10-03 10:34:58,868 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.7.1
+2018-10-03 10:34:58,868 [WARNING] mongo_connector.connector:1260 - pymongo version 3.7.1 was installed without the C extensions. "InvalidBSON: Date value out of range" errors may occur if there are documents with BSON Datetimes that represent times outside of Python's datetime limit.
+2018-10-03 10:34:58,872 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.6.5
+2018-10-03 10:34:58,872 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2018-10-03 10:34:58,872 [INFO] mongo_connector.connector:277 - MongoConnector: Empty oplog progress file.
+2018-10-03 10:34:58,874 [ERROR] mongo_connector.connector:373 - No replica set at "mongodb"! A replica set is required to run mongo-connector. Shutting down...

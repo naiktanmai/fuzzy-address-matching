@@ -12,4 +12,4 @@ RUN pip install --upgrade pip \
   && pip install -r requirements.txt \
   && rm -rf /root/.cache
 
-CMD mongo-connector -m mongodb -t esdb -d elastic2_doc_manager --oplog-ts oplogstatus.txt
+CMD ["mongo-connector", "-c", "config.json"]
