@@ -1,66 +1,56 @@
 version: '3'
 
 services:
-  mongo:
-    image: mongo
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongodata:/data/db
-    networks:
-      main:
-        aliases:
-          - mongodb
-
   elasticsearch:
-    image: elasticsearch:2-alpine
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.4.2
     ports:
       - "9200:9200"
     volumes:
-      - esdata2:/usr/share/elasticsearch/data
+      - esdata6:/usr/share/elasticsearch/data
+    environment:
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
     networks:
       main:
         aliases:
-          - esdb
+          - elasticsearch
 
-  fuzzy_get_api:
-    build:
-      context: ./fetch-api
-      dockerfile: Dockerfile
-    networks:
-      main:
-        aliases:
-          - fuzzy_api
-    ports:
-      - "5000:5000"
-
-  es_connector:
-    build:
-      context: ./connector
-      dockerfile: Dockerfile
-    depends_on:
-      - mongo
-      - elasticsearch
+  logstash:
+    image: docker.elastic.co/logstash/logstash:6.4.2
     volumes:
-      - esconnector2:/usr/src/app
+      - logstash_pipeline:/usr/share/logstash/pipeline/
+      - logstash_data:/usr/share/data
     networks:
       main:
         aliases:
-          - es_mongo_connector
+          - logstash
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.4.2
+    ports:
+      - "5601:5601"
+    networks:
+      main:
+        aliases:
+          - kibana
 
 networks:
   main:
 
 volumes:
-  mongodata:
+  esdata6:
     driver: local-persist
     driver_opts:
-      mountpoint: /home/tanmai/Documents/fuzzy-address-matching/mounts/data
-  esdata2:
+      mountpoint: /home/tanmai/Documents/fuzzy-address-matching/mounts/esdata6
+  logstash_pipeline:
     driver: local-persist
     driver_opts:
-      mountpoint: /home/tanmai/Documents/fuzzy-address-matching/mounts/esdata2
-  esconnector2:
+      mountpoint: /home/tanmai/Documents/fuzzy-address-matching/logstash
+  logstash_data:
     driver: local-persist
     driver_opts:
-      mountpoint: /home/tanmai/Documents/fuzzy-address-matching/connector
+      mountpoint: /home/tanmai/Documents/fuzzy-address-matching/mounts/logstash_data

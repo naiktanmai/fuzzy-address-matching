@@ -1,0 +1,17 @@
+GET /customers/
+
+GET /customers/_search?pretty=true
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+GET /customers/_search?pretty=true
+{
+  "query": {
+    "match": {
+      "Service_Street1": "street 1725 oliveer"
+    }
+  }
+}
