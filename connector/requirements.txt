@@ -1,5 +1,0 @@
-elastic2-doc-manager[elastic2]==0.3.0
-elasticsearch==2.4.1
-mongo-connector[elastic2]==2.5.1
-pymongo==3.7.1
-urllib3==1.23
