@@ -10,14 +10,17 @@ def set_customers_mappings(es):
 def gen_data(records):
     for record in records:
         yield {
+            "_op_type": "update",
             "_index": "customers",
             "_type": "customer",
-            "_source": {
+            "_id": record["Customer"],
+            "doc": {
                 "Customer_Number": record["Customer_Number"],
                 "Service_street2": record["Service_street2"],
                 "Service_Street1": record["Service_Street1"],
                 "Service_City": record["Service_City"]
             },
+            "doc_as_upsert":True
         }
 
 
