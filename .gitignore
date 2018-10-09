@@ -1,2 +1,5 @@
-mounts
+mounts/esdata6/*
+mounts/filebeat_data/*
+!mounts/esdata6/.keep
+!mounts/filebeat_data/.keep
 .idea

@@ -49,4 +49,4 @@ if __name__ == '__main__':
     )
 
     set_customers_mappings(es)
-    bulk_insert_customers(es, input_file = "AWECRMDatasyn_067_176.csv")
+    bulk_insert_customers(es, input_file = "../mouts/filebeat_data/AWECRMDatasyn_067_176.csv")

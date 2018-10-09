@@ -20,10 +20,11 @@ services:
           - elasticsearch
 
   logstash:
-    image: docker.elastic.co/logstash/logstash:6.4.2
-    volumes:
-      - logstash_pipeline:/usr/share/logstash/pipeline/
-      - logstash_data:/usr/share/data
+    build:
+      context: ./logstash
+      dockerfile: Dockerfile
+    ports:
+      - "5044:5044"
     networks:
       main:
         aliases:
@@ -39,12 +40,16 @@ services:
           - kibana
 
   filebeat:
-    image: docker.elastic.co/beats/filebeat:6.4.2
+    build:
+      context: ./filebeat
+      dockerfile: Dockerfile
+    volumes:
+      - filebeat_data:/usr/src/data/
     networks:
       main:
         aliases:
           - filebeat
-          
+
 networks:
   main:
 
@@ -53,11 +58,7 @@ volumes:
     driver: local-persist
     driver_opts:
       mountpoint: /home/tanmai/Documents/fuzzy-address-matching/mounts/esdata6
-  logstash_pipeline:
+  filebeat_data:
     driver: local-persist
     driver_opts:
-      mountpoint: /home/tanmai/Documents/fuzzy-address-matching/logstash
-  logstash_data:
-    driver: local-persist
-    driver_opts:
-      mountpoint: /home/tanmai/Documents/fuzzy-address-matching/mounts/logstash_data
+      mountpoint: /home/tanmai/Documents/fuzzy-address-matching/mounts/filebeat_data
